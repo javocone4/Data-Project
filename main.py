@@ -33,7 +33,7 @@ with open('barrios.geojson', 'w', newline='') as f:
 conn = psycopg2.connect(
     host='localhost',
     user='postgres',
-    password='1234',
+    password='postgres',
     database='colegios'
 )
 conn.autocommit = True
