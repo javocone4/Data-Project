@@ -27,7 +27,7 @@ with open('barrios.geojson', 'w', newline='') as f:
   spamwriter = geojson.dump(f)
   spamwriter.writerow(respuesta1)
 '''
-
+#hola
 
 #CONEXION A POSTGREESQL
 conn = psycopg2.connect(
