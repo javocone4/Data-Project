@@ -1,6 +1,10 @@
 version: '3.5'
 
 services:
+  srv-python:
+    build: .
+    depends_on:
+      - "postgres"
   postgres:
     container_name: postgres_container
     image: postgres:12.1
@@ -16,9 +20,7 @@ services:
       - "5432:5432"
 
     
-    networks: 
-      - postgres
-      
+  
     
     restart: unless-stopped
 
@@ -35,14 +37,11 @@ services:
     ports:
       - "${PGADMIN_PORT:-5050}:80"
 
-    networks:
-      - postgres
+  
 
     restart: unless-stopped
 
-networks:
-  postgres:
-    driver: bridge
+
 
 volumes:
   postgres:
