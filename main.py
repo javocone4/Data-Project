@@ -44,3 +44,5 @@ DELIMITER ','
 CSV HEADER;'''
   
 cursor.execute(sql2)
+
+d
